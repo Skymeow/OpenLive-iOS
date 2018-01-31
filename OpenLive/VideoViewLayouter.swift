@@ -12,22 +12,28 @@ class VideoViewLayouter {
     
     fileprivate var layoutConstraints = [NSLayoutConstraint]()
     
-    func layout(sessions: [VideoSession], fullSession: VideoSession?, inContainer container: UIView) {
+    func layout(sessions: [VideoSession], fullScreenSession: VideoSession?, inContainer container: UIView) {
         
         guard !sessions.isEmpty else {
             return
         }
+        //if there are no sessions, do nothing
         
         NSLayoutConstraint.deactivate(layoutConstraints)
+        //deactivates any UI constraints
+        
         layoutConstraints.removeAll()
+        //Removes all layout constraints
         
         for session in sessions {
             session.hostingView.removeFromSuperview()
-        }
+        } //for each session in the array of sessions, remove each view from the super view (container)
         
-        if let fullSession = fullSession {
-            layoutConstraints.append(contentsOf: layoutFullScreenView(fullSession.hostingView, inContainerView: container))
-            let smallViews = viewList(from: sessions, maxCount: 3, ignorSession: fullSession)
+// *******   start commenting again here  ******** //
+        
+        if let fullScreenSession = fullScreenSession {
+            layoutConstraints.append(contentsOf: layoutFullScreenView(fullScreenSession.hostingView, inContainerView: container))
+            let smallViews = viewList(from: sessions, maxCount: 3, ignorSession: fullScreenSession)
             layoutConstraints.append(contentsOf: layoutSmallViews(smallViews, inContainerView: container))
         } else {
             let allViews = viewList(from: sessions, maxCount: 4, ignorSession: nil)
@@ -36,7 +42,7 @@ class VideoViewLayouter {
         
         if !layoutConstraints.isEmpty {
             NSLayoutConstraint.activate(layoutConstraints)
-        }
+        } //If LayoutConstraints are not empty, activate them
     }
     
     func responseSession(of gesture: UIGestureRecognizer, inSessions sessions: [VideoSession], inContainerView container: UIView) -> VideoSession? {
