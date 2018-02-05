@@ -171,5 +171,5 @@ fileprivate var isMuted = false {
 }
 ```
 
-# Run the app! 
+# Run the app! 
 
