@@ -28,6 +28,7 @@
 		0790F1641D1EBE24003F8C18 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1631D1EBE24003F8C18 /* libc++.tbd */; };
 		0790F1691D1EEAB2003F8C18 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */; };
 		07F531641E275B82009BFE58 /* OpenLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F531631E275B82009BFE58 /* OpenLiveUITests.swift */; };
+		1F91232B20290D8D007E30C3 /* infoPlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F91232A20290D8D007E30C3 /* infoPlist.png */; };
 		9BD495C2E9E5B995DC49A798 /* Pods_OpenLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A389B5D17B2C3222BF04AE0 /* Pods_OpenLive.framework */; };
 		F798436423339E6CEA04AF25 /* Pods_OpenLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FED29D567E083B1BD7F0EE0 /* Pods_OpenLiveUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		07F531611E275B82009BFE58 /* OpenLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F531631E275B82009BFE58 /* OpenLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLiveUITests.swift; sourceTree = "<group>"; };
 		07F531651E275B82009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F912329202907B1007E30C3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1F91232A20290D8D007E30C3 /* infoPlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoPlist.png; sourceTree = "<group>"; };
 		25B060A587D2D60173A933C4 /* Pods-OpenLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenLiveUITests/Pods-OpenLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FED29D567E083B1BD7F0EE0 /* Pods_OpenLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A389B5D17B2C3222BF04AE0 /* Pods_OpenLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,10 +141,12 @@
 		078012EB1D1E57730093DE24 /* OpenLive */ = {
 			isa = PBXGroup;
 			children = (
+				1F91232A20290D8D007E30C3 /* infoPlist.png */,
 				078012F01D1E57730093DE24 /* Main.storyboard */,
 				078012EE1D1E57730093DE24 /* MainViewController.swift */,
 				0790F1251D1E6450003F8C18 /* SettingsViewController.swift */,
 				0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */,
+				1F912329202907B1007E30C3 /* README.md */,
 				07130E891D22928200CC85D8 /* KeyCenter.swift */,
 				0790F1501D1E9631003F8C18 /* VideoSession.swift */,
 				0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */,
@@ -286,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F91232B20290D8D007E30C3 /* infoPlist.png in Resources */,
 				078012F71D1E57730093DE24 /* LaunchScreen.storyboard in Resources */,
 				078012F41D1E57730093DE24 /* Assets.xcassets in Resources */,
 				078012F21D1E57730093DE24 /* Main.storyboard in Resources */,

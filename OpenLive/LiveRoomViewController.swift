@@ -143,7 +143,6 @@ private extension LiveRoomViewController {
         // Step 7 -> Set client role (using clientRole variable from
         // Step 8 -> Enable dual stream mode
         
-         
         if isBroadcaster {
             // Step 9 -> Start video preview
 
