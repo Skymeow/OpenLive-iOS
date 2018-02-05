@@ -20,7 +20,7 @@ end
 pod install
 ```
 
-## Add Privacy Settings – Info.plist 
+## Add Privacy Settings – Info.plist
 
 
 ![Should Show Plist File](/OpenLive/infoPlist.png)
@@ -171,5 +171,4 @@ fileprivate var isMuted = false {
 }
 ```
 
-# Run the app! 
-
+# Run the app!
