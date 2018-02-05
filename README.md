@@ -1,4 +1,4 @@
-﻿#  1) Clone Project & add Agora RTC SDK via CocoaPods
+﻿#  1) Clone Project & add Agora RTC SDK via CocoaPods
 
 ## git clone https://github.com/sidsharma27/OpenLive-iOS -b StartProject
 
@@ -20,7 +20,7 @@ end
 pod install
 ```
 
-## Add Privacy Settings – Info.plist 
+## Add Privacy Settings – Info.plist 
 
 
 ![Should Show Plist File](/OpenLive/infoPlist.png)
