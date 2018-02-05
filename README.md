@@ -30,7 +30,7 @@ pod install
 
 ## Create the ‘AgoraRtcEngineKit’ object and initialize it class as a singleton instance
 
-```bash
+```swift
 import AgoraRtcEngineKit
 
 var rtcEngine : AgoraRtcEngineKit!
@@ -43,7 +43,7 @@ var rtcEngine : AgoraRtcEngineKit!
 
 ## Set the Channel Profile to Live Broadcast
 
-```bash
+```swift
 rtcEngine.setChannelProfile(.channelProfile_LiveBroadcasting)
 ```
 
@@ -51,7 +51,7 @@ rtcEngine.setChannelProfile(.channelProfile_LiveBroadcasting)
 
 ## Enables video data to be sent to stream, without this -> Audio Only
 
-```bash
+```swift
 rtcEngine.enableVideo()
 ```
 
@@ -59,7 +59,7 @@ rtcEngine.enableVideo()
 
 ## Tells AgoraRtcEngine what type of channel it is in order to optimize the particular call
 
-```bash
+```swift
 engine.setChannelProfile(.channelProfile_LiveBroadcasting)
 ```
 
@@ -67,7 +67,7 @@ engine.setChannelProfile(.channelProfile_LiveBroadcasting)
 
 ## Sets the video encoding profile (FPS / Resolution)
 
-```bash
+```swift
 engine.setVideoProfile(videoProfile, swapWidthAndHeight:true)
 ```
 
@@ -75,7 +75,7 @@ engine.setVideoProfile(videoProfile, swapWidthAndHeight:true)
 
 ## Tells RtcEngine which role the member is: Audience or Broadcaster
 
-```bash
+```swift
 rtcEngine.setClientRole(clientRole, withKey: nil)
 ```
 
@@ -83,7 +83,7 @@ rtcEngine.setClientRole(clientRole, withKey: nil)
 
 ## Allows the ability to have two different types of stream modes (high and low)
 
-```bash
+```swift
 rtcEngine.enableDualStreamMode(true)
 ```
 
@@ -91,7 +91,7 @@ rtcEngine.enableDualStreamMode(true)
 
 ## Adjust stream type based on size of UI windows to save bandwidth & calculation resources (in setStreamType())
 
-```bash
+```swift
 rtcEngine.setRemoteVideoStream(UInt(session.uid), type: (session == fullScreenSession ?  .videoStream_High : .videoStream_Low))
 
 rtcEngine.setRemoteVideoStream(UInt(session.uid), type: .videoStream_High)
@@ -101,7 +101,7 @@ rtcEngine.setRemoteVideoStream(UInt(session.uid), type: .videoStream_High)
 
 ## Join the channel with App ID as Key (unsecure alternative instead of Dynamic Key - demo purposes only)
 
-```bash
+```swift
 rtcEngine.joinChannel(byKey: KeyCenter.AppID, channelName: roomName, info: nil, uid: 0, joinSucess: nil)
 ```
 
@@ -109,7 +109,7 @@ rtcEngine.joinChannel(byKey: KeyCenter.AppID, channelName: roomName, info: nil, 
 
 ## Stop the local preview, unbind the view, and leave the channel ( in leaveChannel( ) )
 
-```bash
+```swift
 rtcEngine.setupLocalVideo(nil)
 rtcEngine.leaveChannel(nil)
 ```
@@ -117,7 +117,8 @@ rtcEngine.leaveChannel(nil)
 # 12) Set the local/remote video view
 
 ## VideoSession is an object that contains the information regarding an individual video session
-```bash
+
+```swift
 var canvas: AgoraRtcVideoCanvas!
 canvas = AgoraRtcVideoCanvas()
 canvas.uid = Uint(uid)
@@ -126,26 +127,30 @@ canvas.view = hostingView
 ```
 
 ## Set remote video view in rtcEngine callback (didJoinedOfUid)
-```bash
+
+```swift
 rtcEngine.setupRemoteVideo(userSession.canvas)
 ```
 
 ## Set local video view in addLocalSession()
-```bash
+
+```swift
 rtcEngine.setupLocalVideo(localSession.canvas)
 ```
 
 # 13) Setup additional features
 
 ## Switch camera (toggle front/back)
-```
+
+```swift
 @IBAction func doSwitchCameraPressed (_sender:UIButton) {
     rtcEngine?.switchCamera()
 }
 ```
 
 ## Mute Local Audio Stream (don’t send audio stream)
-```bash
+
+```swift
 fileprivate var isMuted = false {
     didSet{
         rtcEngine?.muteLocalAudioStream(isMuted)
@@ -154,7 +159,8 @@ fileprivate var isMuted = false {
 ```
 
 ## Join broadcast (audience member joins as Guest broadcaster)
-```bash
+
+```swift
 @IBAction func doBroadcastPressed(_sender:UIButton) {
     if isBroadcaster{
         clientRole= .clientRole_Audience
@@ -165,5 +171,5 @@ fileprivate var isMuted = false {
 }
 ```
 
-# Run the app! 🚀
+# Run the app! 
 
