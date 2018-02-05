@@ -23,7 +23,7 @@ pod install
 ## Add Privacy Settings – Info.plist 
 
 
-![Should Show Plist File](OpenLive/infoPlist.png)
+![Should Show Plist File](/OpenLive/Info_Plist.png)
 
 
 # 2) Create & Initialize ‘AgoraRtcEngineKit’ object
