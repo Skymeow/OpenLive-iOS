@@ -251,7 +251,7 @@
 				TargetAttributes = {
 					078012E81D1E57730093DE24 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SS68NK2VAB;
+						DevelopmentTeam = FTR7U9GRK3;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -559,7 +559,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yuhua Gong (TH5SJ72C94)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SS68NK2VAB;
+				DEVELOPMENT_TEAM = FTR7U9GRK3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,7 +569,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.agora.open.live;
+				PRODUCT_BUNDLE_IDENTIFIER = sidtesting.9com.test.agora.open.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -589,7 +589,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Agora Lab, Inc. (48TB6ZZL5S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SS68NK2VAB;
+				DEVELOPMENT_TEAM = FTR7U9GRK3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +599,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.agora.open.live;
+				PRODUCT_BUNDLE_IDENTIFIER = sidtesting.9com.test.agora.open.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

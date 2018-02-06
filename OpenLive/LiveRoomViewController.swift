@@ -29,7 +29,7 @@ class LiveRoomViewController: UIViewController {
     
     @IBOutlet weak var audioMuteButton: UIButton!
     //Button to mute the broadcast
-    
+        
     var roomName: String!
     //String to get room name from previous VC
     
@@ -52,8 +52,7 @@ class LiveRoomViewController: UIViewController {
     
     fileprivate var isMuted = false {
         didSet {
-            //Step 13 -> mute local audio based on the value of isMuted
-
+            //Step 12 -> mute local audio based on the value of isMuted
             audioMuteButton?.setImage(UIImage(named: isMuted ? "btn_mute_cancel" : "btn_mute"), for: .normal)
         }
     }
@@ -101,18 +100,15 @@ class LiveRoomViewController: UIViewController {
     
     @IBAction func doBroadcastPressed(_ sender: UIButton) {
         if isBroadcaster {
-            //Step 7 => If the member is a broadcaster, change the clientRole to Audience (.clientRole_Audience)
-            clientRole = .clientRole_Audience
+            //Step 13 => If the member is a broadcaster, changes the clientRole to Audience (.clientRole_Audience)
             if fullScreenSession?.uid == 0 {
                 fullScreenSession = nil
             }
         } else {
-            clientRole = .clientRole_Broadcaster
-            //Step 7 => If the member is a broadcaster, change the clientRole to Broadcaster (.clientRole_Broadcaster)
+            //Step 13 => If the member is a broadcaster, changes the clientRole to Broadcaster (.clientRole_Broadcaster)
         }
         
-        //Step 7 => Set client Role here based on the updated clientRole value
-        
+        //Step 13 => Set client Role here based on the updated clientRole value
         updateInterface(withAnimation :true)
     }
     
@@ -138,29 +134,20 @@ private extension LiveRoomViewController {
     func loadAgoraKit() {
         // Step 2 -> Initialize ‘AgoraRtcEngineKit’ object
         // Step 3 -> Set Channel Profile
-        // Step 5 -> Enable Video
-        // Step 6 -> Set video profile (using videoProfile variable from previous VC)
-        // Step 7 -> Set client role (using clientRole variable from
-        // Step 8 -> Enable dual stream mode
-        
-        if isBroadcaster {
-            // Step 9 -> Start video preview
-
-        }
-        
+        // Step 4 -> Enable Video
+        // Step 5 -> Set video profile (using videoProfile variable from previous VC)
+        // Step 6 -> Set client role (using clientRole variable)
+        // Step 7 -> Enable dual stream mode
+    
         addLocalSession()
-
-        // Step 11 ->
-
         
-         
         let sucessCode = 1
-        // Step 10 -> Join channel passing in the generated Dynamic Token
+        // Step 9 -> Join channel passing in the generated Dynamic Token (or App ID for demo purposes) & roomName variable
         // Update successCode to equal the returned Integer result of the joinChannel call.
         
          if sucessCode == 0 {
             setIdleTimerActive(false)
-            //Step 11 -> Enable Speakerphone by passing in true value for setEnableSpeakerphone()
+            //Step 10 -> Enable Speakerphone by passing in true value for setEnableSpeakerphone()
          } else {
             DispatchQueue.main.async(execute: {
                 self.alert(string: "Join channel failed: \(sucessCode)")
@@ -171,12 +158,8 @@ private extension LiveRoomViewController {
     func leaveChannel() {
         setIdleTimerActive(true)
         
-        if isBroadcaster {
-            //Step 12 -> Stops local video preview and closes the video if member is broadcaster.
-        }
-        
-        //Step 12 -> Unbind the local video view
-        //Step 12 -> Leave the channel
+        //Step 11 -> Unbind the local video view
+        //Step 11 -> Leave the channel
         
         for session in videoSessions {
             session.hostingView.removeFromSuperview()
@@ -241,7 +224,7 @@ private extension LiveRoomViewController {
        
         if !isBroadcaster && !displaySessions.isEmpty {
             displaySessions.removeFirst()
-        } // ? What does this do ?
+        }
         
         viewLayouter.layout(sessions: displaySessions, fullScreenSession: fullScreenSession, inContainer: remoteContainerView)
         setStreamType(forSessions: displaySessions, fullScreenSession: fullScreenSession)
@@ -253,12 +236,11 @@ private extension LiveRoomViewController {
                 //This method allows the application to adjust the corresponding video stream type according to the size of the video windows to save bandwidth and calculation resources.
                 //.videoStream_High -> high resolution, high frame rated (based on videoProfile)
                 //.videoStream_Low -> low resolution, low frame rate
-                //Step 11 => If the videoSession is a fullscreenSession, choose to recieve high stream, the others to recieve the low stream
-                
+                //Step 8 => If the videoSession is a fullscreenSession, choose to recieve high stream, the others to recieve the low stream
             }
         } else {
             for session in sessions {
-                //Step 11 => Since none of the sessions are a fullscreenSession, choose to recieve high stream for all videoSessions
+                //Step 8 => Since none of the sessions are a fullscreenSession, choose to recieve high stream for all videoSessions
                 //.videoStream_High -> high resolution, high frame rate (based on videoProfile)
             }
         }
@@ -267,8 +249,7 @@ private extension LiveRoomViewController {
     func addLocalSession() {
         let localSession = VideoSession.localSession()
         videoSessions.append(localSession)
-        
-        //Step 4 => Set up the local video by grabbing the local videoSession's canvas value
+        //Step 11 => Set up the local video by grabbing the local videoSession's canvas value
     }
     
     func fetchSession(ofUid uid: Int64) -> VideoSession? {
@@ -294,7 +275,7 @@ private extension LiveRoomViewController {
 extension LiveRoomViewController: AgoraRtcEngineDelegate {
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
         let userSession = videoSession(ofUid: Int64(uid))
-        //Step 4 -> Take the canvas of the videoSession and use it to set up the remote video
+        //Step 11 -> Take the canvas of the videoSession and use it to set up the remote video
     }
     
     func rtcEngine(_ engine: AgoraRtcEngineKit, firstLocalVideoFrameWith size: CGSize, elapsed: Int) {
