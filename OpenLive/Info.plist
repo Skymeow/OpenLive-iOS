@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Open Live Test</string>
+	<string>for live streaming</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Open Live Test</string>
+	<string>for live streaming</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

@@ -12,7 +12,7 @@ import AgoraRtcEngineKit
 class VideoSession: NSObject {
     var uid: Int64 = 0
     var hostingView: UIView!
-
+    var canvas: AgoraRtcVideoCanvas!
     
     init(uid: Int64) {
         self.uid = uid
@@ -24,9 +24,13 @@ class VideoSession: NSObject {
         //tells iOS not to create Auto Layout constraints automatically
        
         // Step 12 -> Initialize the AgoraRtcVideoCanvas object
+        canvas = AgoraRtcVideoCanvas()
         // Step 12 -> Assign the object's uid that is passed in as a parameter ---> UInt(uid)
+         canvas.uid = UInt(uid)
         // Step 12 -> Assign the object's view property to the view above (hostingView)
+        canvas.view = hostingView
         // Step 12 -> Assign the object's render mode property to .render_hidden
+         canvas.renderMode = .render_Hidden
         
         
         // WHAT IS RENDER MODE HIDDEN?
