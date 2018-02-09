@@ -8,6 +8,8 @@
 
 import UIKit
 import AgoraRtcEngineKit
+//import Alamofire
+import SocketIO
 
 protocol LiveRoomVCDelegate: NSObjectProtocol {
     func liveVCNeedClose(_ liveVC: LiveRoomViewController)
@@ -28,10 +30,11 @@ class LiveRoomViewController: UIViewController {
     //Array of UIButtons on the bottom left hand side
     
     @IBOutlet weak var audioMuteButton: UIButton!
-    //Button to mute the broadcast
-        
+   
+    // MARK: this is Channel ID , has to be unique
+    var roomId: String?
+    
     var roomName: String!
-    //String to get room name from previous VC
     
     var clientRole = AgoraRtcClientRole.clientRole_Audience {
         didSet {
@@ -138,34 +141,52 @@ private extension LiveRoomViewController {
     func loadAgoraKit() {
         
         //   MARK: S2 initialize the class of engine to be a singleton instance
-        rtcEngine = AgoraRtcEngineKit.sharedEngine(withAppId: "6a05c965b5644b508eae5db13c82fdba", delegate: self)
+        rtcEngine = AgoraRtcEngineKit.sharedEngine(withAppId: KeyCenter.AppId, delegate: self)
         // Step 3 -> Set Channel Profile
         rtcEngine.setChannelProfile(.channelProfile_LiveBroadcasting)
+        // Step 7 -> Enable dual stream mode
+        rtcEngine.enableDualStreamMode(true)
         // Step 4 -> Enable Video
         rtcEngine.enableVideo()
         // Step 5 -> Set video profile (using videoProfile variable from previous VC)
         rtcEngine.setVideoProfile(videoProfile, swapWidthAndHeight: true)
+        rtcEngine.setVideoQualityParameters(false)
+        
         // Step 6 -> Set client role (using clientRole variable)
         rtcEngine.setClientRole(clientRole, withKey: nil)
-        // Step 7 -> Enable dual stream mode
-        rtcEngine.enableDualStreamMode(true)
+        
+        //  MARK: IMPORTANT TO UPDATE FRAME
+//        return 0 when this method is called successfully, or negative value when this method failed
+        if isBroadcaster {
+            rtcEngine.startPreview()
+        }
         
         addLocalSession()
         
-        // MARK:( Join channel ) Fix me! tell james to passing in the generated Dynamic Token In backend(or App ID for demo purposes) & roomName variable
-        let successCode = rtcEngine.joinChannel(byKey: KeyCenter.AppId, channelName: roomName, info: nil, uid: 0, joinSuccess: nil)
+        // MARK:( Join channel ) and create unique roomId
+        roomId = UUID().uuidString
+        let successCode = rtcEngine.joinChannel(byKey: KeyCenter.AppId, channelName: roomId!, info: nil, uid: 0, joinSuccess: nil)
         
         // MARK: Success code: 0 when executed successfully, and return negative value when failed.
         if successCode == 0 {
             setIdleTimerActive(false)
             //Step 10 -> Enable Speakerphone by passing in true value for setEnableSpeakerphone()
             rtcEngine.setEnableSpeakerphone(true)
+            
+            //   MARK: sent room id and infos to socket
+            SocketService.instance.addChannel(Id: roomId!, name: roomName, userName: "sky", completion: { (success) in
+                print("success emit data")
+                self.dismiss(animated: true, completion: nil)
+            })
+           
          } else {
             DispatchQueue.main.async(execute: {
                 self.alert(string: "Join channel failed: \(successCode)")
             })
          }
     }
+    
+    
     
     // MARK:   leave channel
     func leaveChannel() {
@@ -225,7 +246,7 @@ private extension LiveRoomViewController {
 private extension LiveRoomViewController {
     func updateInterface(withAnimation animation: Bool) {
         if animation {
-            UIView.animate(withDuration: 0.3, animations: { [weak self] _ in
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
                 self?.updateInterface()
                 self?.view.layoutIfNeeded()
             })
@@ -252,13 +273,13 @@ private extension LiveRoomViewController {
         if fullScreenSession != nil {
             for session in sessions {
                 //MARK: Step 8 => If the videoSession is a fullscreenSession, choose to recieve high stream, the others to recieve the low stream
-            rtcEngine.setRemoteVideoStream(UInt(session.uid),type: .videoStream_High)
+            rtcEngine.setRemoteVideoStream(UInt(session.uid), type: (session == fullScreenSession ? .videoStream_High : .videoStream_Low))
                 
             }
         } else {
             for session in sessions {
                 //.videoStream_High -> high resolution, high frame rate (based on videoProfile)
-                rtcEngine.setRemoteVideoStream(UInt(session.uid),type:(.videoStream_Low))
+                rtcEngine.setRemoteVideoStream(UInt(session.uid), type: .videoStream_High)
             }
         }
     }

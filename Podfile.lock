@@ -1,12 +1,21 @@
 PODS:
   - AgoraRtcEngine_iOS (2.0.2)
+  - Alamofire (4.6.0)
+  - Socket.IO-Client-Swift (13.1.1):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.4)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS
+  - Alamofire
+  - Socket.IO-Client-Swift (~> 13.1.0)
 
 SPEC CHECKSUMS:
   AgoraRtcEngine_iOS: 67884f8bbe46aae8ed9af4195b0683562f083fde
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Socket.IO-Client-Swift: f22222913f29801e30ae0df712db663ec096edc2
+  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
 
-PODFILE CHECKSUM: 4973dcc1c427886f3b384c52c9b15803c8ff7aee
+PODFILE CHECKSUM: 9605af5852565837fa0d1c2b4399cf36321fcd61
 
 COCOAPODS: 1.3.1

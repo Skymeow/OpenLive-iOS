@@ -16,4 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
     }
+    //    MARK: connectToSocket
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        SocketService.instance.establishConnection()
+    }
+    
+    //    MARK: leave Socket
+    func applicationWillTerminate(_ application: UIApplication) {
+        SocketService.instance.closeConnection()
+    }
 }

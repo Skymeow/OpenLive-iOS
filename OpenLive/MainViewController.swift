@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var roomNameTextField: UITextField!
     @IBOutlet weak var popoverSourceView: UIView!
-    
+
     fileprivate var videoProfile = AgoraRtcVideoProfile._VideoProfile_360P
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
             settingsVC.delegate = self
         case "mainToLive":
             let liveVC = segue.destination as! LiveRoomViewController
-            liveVC.roomName = roomNameTextField.text!
+            liveVC.roomName = roomNameTextField.text
             liveVC.videoProfile = videoProfile
             if let value = sender as? NSNumber, let role = AgoraRtcClientRole(rawValue: value.intValue) {
                 liveVC.clientRole = role

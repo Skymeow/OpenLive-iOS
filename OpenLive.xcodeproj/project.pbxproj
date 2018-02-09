@@ -31,6 +31,12 @@
 		1F91232B20290D8D007E30C3 /* infoPlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F91232A20290D8D007E30C3 /* infoPlist.png */; };
 		9BD495C2E9E5B995DC49A798 /* Pods_OpenLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A389B5D17B2C3222BF04AE0 /* Pods_OpenLive.framework */; };
 		F798436423339E6CEA04AF25 /* Pods_OpenLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FED29D567E083B1BD7F0EE0 /* Pods_OpenLiveUITests.framework */; };
+		F96ACB4E202CFA1D001CA53F /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96ACB50202CFA1D001CA53F /* SocketIO.framework */; };
+		F96ACB4F202CFA1D001CA53F /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96ACB51202CFA1D001CA53F /* Starscream.framework */; };
+		F96ACB52202CFA22001CA53F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96ACB53202CFA22001CA53F /* Alamofire.framework */; };
+		F96ACB55202D0261001CA53F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB54202D0261001CA53F /* Config.swift */; };
+		F96ACB57202D1851001CA53F /* Poop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB56202D1851001CA53F /* Poop.swift */; };
+		F96ACB59202D74CD001CA53F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB58202D74CD001CA53F /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		50215475412EB07621262284 /* Pods-OpenLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenLiveUITests/Pods-OpenLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67D0FE019758116E88F0DB1D /* Pods-OpenLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenLive/Pods-OpenLive.release.xcconfig"; sourceTree = "<group>"; };
 		B7C30B0E9B19F46A7D6AF5DE /* Pods-OpenLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenLive/Pods-OpenLive.debug.xcconfig"; sourceTree = "<group>"; };
+		F96ACB50202CFA1D001CA53F /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96ACB51202CFA1D001CA53F /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96ACB53202CFA22001CA53F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96ACB54202D0261001CA53F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F96ACB56202D1851001CA53F /* Poop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poop.swift; sourceTree = "<group>"; };
+		F96ACB58202D74CD001CA53F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96ACB52202CFA22001CA53F /* Alamofire.framework in Frameworks */,
+				F96ACB4E202CFA1D001CA53F /* SocketIO.framework in Frameworks */,
+				F96ACB4F202CFA1D001CA53F /* Starscream.framework in Frameworks */,
 				0745273D1E9E050C0054D2D4 /* libresolv.tbd in Frameworks */,
 				0790F1641D1EBE24003F8C18 /* libc++.tbd in Frameworks */,
 				0790F1241D1E63DD003F8C18 /* SystemConfiguration.framework in Frameworks */,
@@ -111,6 +126,9 @@
 		0745273B1E9E050C0054D2D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F96ACB53202CFA22001CA53F /* Alamofire.framework */,
+				F96ACB50202CFA1D001CA53F /* SocketIO.framework */,
+				F96ACB51202CFA1D001CA53F /* Starscream.framework */,
 				0745273C1E9E050C0054D2D4 /* libresolv.tbd */,
 				4A389B5D17B2C3222BF04AE0 /* Pods_OpenLive.framework */,
 				3FED29D567E083B1BD7F0EE0 /* Pods_OpenLiveUITests.framework */,
@@ -146,8 +164,10 @@
 				078012EE1D1E57730093DE24 /* MainViewController.swift */,
 				0790F1251D1E6450003F8C18 /* SettingsViewController.swift */,
 				0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */,
+				F96ACB58202D74CD001CA53F /* SocketService.swift */,
 				1F912329202907B1007E30C3 /* README.md */,
 				07130E891D22928200CC85D8 /* KeyCenter.swift */,
+				F96ACB56202D1851001CA53F /* Poop.swift */,
 				0790F1501D1E9631003F8C18 /* VideoSession.swift */,
 				0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */,
 				0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */,
@@ -156,6 +176,7 @@
 				078012F31D1E57730093DE24 /* Assets.xcassets */,
 				078012F51D1E57730093DE24 /* LaunchScreen.storyboard */,
 				078012F81D1E57730093DE24 /* Info.plist */,
+				F96ACB54202D0261001CA53F /* Config.swift */,
 			);
 			path = OpenLive;
 			sourceTree = "<group>";
@@ -380,9 +401,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenLive/Pods-OpenLive-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -413,12 +441,15 @@
 			files = (
 				0790F1691D1EEAB2003F8C18 /* ProfileCell.swift in Sources */,
 				0790F1511D1E9631003F8C18 /* VideoSession.swift in Sources */,
+				F96ACB55202D0261001CA53F /* Config.swift in Sources */,
 				078012EF1D1E57730093DE24 /* MainViewController.swift in Sources */,
 				078012ED1D1E57730093DE24 /* AppDelegate.swift in Sources */,
+				F96ACB59202D74CD001CA53F /* SocketService.swift in Sources */,
 				07130E8A1D22928200CC85D8 /* KeyCenter.swift in Sources */,
 				0790F1531D1E9781003F8C18 /* VideoViewLayouter.swift in Sources */,
 				0790F1281D1E645B003F8C18 /* LiveRoomViewController.swift in Sources */,
 				0790F1261D1E6450003F8C18 /* SettingsViewController.swift in Sources */,
+				F96ACB57202D1851001CA53F /* Poop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -541,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -566,7 +597,7 @@
 					"$(PROJECT_DIR)/OpenLive",
 				);
 				INFOPLIST_FILE = OpenLive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = sidtesting.9com.test.agora.open.live;
@@ -575,7 +606,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -596,7 +628,7 @@
 					"$(PROJECT_DIR)/OpenLive",
 				);
 				INFOPLIST_FILE = OpenLive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = sidtesting.9com.test.agora.open.live;
@@ -604,7 +636,8 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
