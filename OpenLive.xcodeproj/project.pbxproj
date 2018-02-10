@@ -10,8 +10,8 @@
 		07130E8A1D22928200CC85D8 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07130E891D22928200CC85D8 /* KeyCenter.swift */; };
 		0745273D1E9E050C0054D2D4 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0745273C1E9E050C0054D2D4 /* libresolv.tbd */; };
 		078012ED1D1E57730093DE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078012EC1D1E57730093DE24 /* AppDelegate.swift */; };
-		078012EF1D1E57730093DE24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078012EE1D1E57730093DE24 /* MainViewController.swift */; };
-		078012F21D1E57730093DE24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078012F01D1E57730093DE24 /* Main.storyboard */; };
+		078012EF1D1E57730093DE24 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078012EE1D1E57730093DE24 /* CreateRoomViewController.swift */; };
+		078012F21D1E57730093DE24 /* CreateRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078012F01D1E57730093DE24 /* CreateRoom.storyboard */; };
 		078012F41D1E57730093DE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078012F31D1E57730093DE24 /* Assets.xcassets */; };
 		078012F71D1E57730093DE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078012F51D1E57730093DE24 /* LaunchScreen.storyboard */; };
 		0790F1141D1E6325003F8C18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0790F1131D1E6325003F8C18 /* AVFoundation.framework */; };
@@ -38,6 +38,18 @@
 		F96ACB57202D1851001CA53F /* Poop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB56202D1851001CA53F /* Poop.swift */; };
 		F96ACB59202D74CD001CA53F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB58202D74CD001CA53F /* SocketService.swift */; };
 		F96ACB5B202D829D001CA53F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB5A202D829D001CA53F /* Room.swift */; };
+		F96ACB67202F7B20001CA53F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F96ACB64202F7B20001CA53F /* GoogleService-Info.plist */; };
+		F96ACB68202F7B20001CA53F /* CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB65202F7B20001CA53F /* CollectionViewDatasource.swift */; };
+		F96ACB6A202F7B5E001CA53F /* Authservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB69202F7B5E001CA53F /* Authservice.swift */; };
+		F96ACB6C202F7BB3001CA53F /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB6B202F7BB3001CA53F /* CollectionCell.swift */; };
+		F96ACB72202F7BC6001CA53F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB6E202F7BC5001CA53F /* HomeViewController.swift */; };
+		F96ACB74202F7BC6001CA53F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB70202F7BC6001CA53F /* RegisterViewController.swift */; };
+		F96ACB77202F7BED001CA53F /* UIImage&Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB75202F7BED001CA53F /* UIImage&Cache.swift */; };
+		F96ACB78202F7BED001CA53F /* TableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB76202F7BED001CA53F /* TableViewDatasource.swift */; };
+		F96ACB7D202F7C58001CA53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96ACB7B202F7C58001CA53F /* Main.storyboard */; };
+		F96ACB82202F803F001CA53F /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96ACB81202F803F001CA53F /* Register.storyboard */; };
+		F96ACB84202F88DB001CA53F /* FakeRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB83202F88DB001CA53F /* FakeRoom.swift */; };
+		F96ACB85202F8A0E001CA53F /* LiveRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96ACB7E202F7D1E001CA53F /* LiveRoom.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +67,8 @@
 		0745273C1E9E050C0054D2D4 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		078012E91D1E57730093DE24 /* OpenLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078012EC1D1E57730093DE24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		078012EE1D1E57730093DE24 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		078012F11D1E57730093DE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		078012EE1D1E57730093DE24 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
+		078012F11D1E57730093DE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreateRoom.storyboard; sourceTree = "<group>"; };
 		078012F31D1E57730093DE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		078012F61D1E57730093DE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		078012F81D1E57730093DE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +88,6 @@
 		07F531611E275B82009BFE58 /* OpenLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F531631E275B82009BFE58 /* OpenLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLiveUITests.swift; sourceTree = "<group>"; };
 		07F531651E275B82009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F912329202907B1007E30C3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1F91232A20290D8D007E30C3 /* infoPlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoPlist.png; sourceTree = "<group>"; };
 		25B060A587D2D60173A933C4 /* Pods-OpenLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenLiveUITests/Pods-OpenLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FED29D567E083B1BD7F0EE0 /* Pods_OpenLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +102,18 @@
 		F96ACB56202D1851001CA53F /* Poop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poop.swift; sourceTree = "<group>"; };
 		F96ACB58202D74CD001CA53F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		F96ACB5A202D829D001CA53F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		F96ACB64202F7B20001CA53F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F96ACB65202F7B20001CA53F /* CollectionViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDatasource.swift; sourceTree = "<group>"; };
+		F96ACB69202F7B5E001CA53F /* Authservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authservice.swift; sourceTree = "<group>"; };
+		F96ACB6B202F7BB3001CA53F /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		F96ACB6E202F7BC5001CA53F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F96ACB70202F7BC6001CA53F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F96ACB75202F7BED001CA53F /* UIImage&Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage&Cache.swift"; sourceTree = "<group>"; };
+		F96ACB76202F7BED001CA53F /* TableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDatasource.swift; sourceTree = "<group>"; };
+		F96ACB7B202F7C58001CA53F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F96ACB7E202F7D1E001CA53F /* LiveRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LiveRoom.storyboard; sourceTree = "<group>"; };
+		F96ACB81202F803F001CA53F /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		F96ACB83202F88DB001CA53F /* FakeRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRoom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +184,11 @@
 		078012EB1D1E57730093DE24 /* OpenLive */ = {
 			isa = PBXGroup;
 			children = (
-				1F912329202907B1007E30C3 /* README.md */,
+				F96ACB64202F7B20001CA53F /* GoogleService-Info.plist */,
 				1F91232A20290D8D007E30C3 /* infoPlist.png */,
 				078012F81D1E57730093DE24 /* Info.plist */,
 				078012EC1D1E57730093DE24 /* AppDelegate.swift */,
+				F96ACB79202F7BF5001CA53F /* Helper */,
 				F96ACB5F202F76E6001CA53F /* Storyboard */,
 				F96ACB5C202F7679001CA53F /* ViewController */,
 				F96ACB62202F781F001CA53F /* Service */,
@@ -216,7 +240,9 @@
 		F96ACB5C202F7679001CA53F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				078012EE1D1E57730093DE24 /* MainViewController.swift */,
+				F96ACB6E202F7BC5001CA53F /* HomeViewController.swift */,
+				F96ACB70202F7BC6001CA53F /* RegisterViewController.swift */,
+				078012EE1D1E57730093DE24 /* CreateRoomViewController.swift */,
 				0790F1251D1E6450003F8C18 /* SettingsViewController.swift */,
 				0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */,
 			);
@@ -226,6 +252,7 @@
 		F96ACB5D202F76A1001CA53F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F96ACB83202F88DB001CA53F /* FakeRoom.swift */,
 				F96ACB5A202D829D001CA53F /* Room.swift */,
 				F96ACB56202D1851001CA53F /* Poop.swift */,
 			);
@@ -244,7 +271,10 @@
 		F96ACB5F202F76E6001CA53F /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				078012F01D1E57730093DE24 /* Main.storyboard */,
+				F96ACB7B202F7C58001CA53F /* Main.storyboard */,
+				F96ACB81202F803F001CA53F /* Register.storyboard */,
+				078012F01D1E57730093DE24 /* CreateRoom.storyboard */,
+				F96ACB7E202F7D1E001CA53F /* LiveRoom.storyboard */,
 				078012F51D1E57730093DE24 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -261,6 +291,7 @@
 		F96ACB61202F780C001CA53F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F96ACB6B202F7BB3001CA53F /* CollectionCell.swift */,
 				0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */,
 				0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */,
 			);
@@ -270,9 +301,20 @@
 		F96ACB62202F781F001CA53F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F96ACB69202F7B5E001CA53F /* Authservice.swift */,
 				F96ACB58202D74CD001CA53F /* SocketService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F96ACB79202F7BF5001CA53F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F96ACB65202F7B20001CA53F /* CollectionViewDatasource.swift */,
+				F96ACB76202F7BED001CA53F /* TableViewDatasource.swift */,
+				F96ACB75202F7BED001CA53F /* UIImage&Cache.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,8 +415,12 @@
 			files = (
 				1F91232B20290D8D007E30C3 /* infoPlist.png in Resources */,
 				078012F71D1E57730093DE24 /* LaunchScreen.storyboard in Resources */,
+				F96ACB82202F803F001CA53F /* Register.storyboard in Resources */,
+				F96ACB7D202F7C58001CA53F /* Main.storyboard in Resources */,
+				F96ACB67202F7B20001CA53F /* GoogleService-Info.plist in Resources */,
 				078012F41D1E57730093DE24 /* Assets.xcassets in Resources */,
-				078012F21D1E57730093DE24 /* Main.storyboard in Resources */,
+				078012F21D1E57730093DE24 /* CreateRoom.storyboard in Resources */,
+				F96ACB85202F8A0E001CA53F /* LiveRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,12 +508,34 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OpenLive/Pods-OpenLive-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
@@ -482,9 +550,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenLive/Pods-OpenLive-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -499,16 +570,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0790F1691D1EEAB2003F8C18 /* ProfileCell.swift in Sources */,
+				F96ACB77202F7BED001CA53F /* UIImage&Cache.swift in Sources */,
 				0790F1511D1E9631003F8C18 /* VideoSession.swift in Sources */,
 				F96ACB5B202D829D001CA53F /* Room.swift in Sources */,
 				F96ACB55202D0261001CA53F /* Config.swift in Sources */,
-				078012EF1D1E57730093DE24 /* MainViewController.swift in Sources */,
+				F96ACB72202F7BC6001CA53F /* HomeViewController.swift in Sources */,
+				F96ACB68202F7B20001CA53F /* CollectionViewDatasource.swift in Sources */,
+				078012EF1D1E57730093DE24 /* CreateRoomViewController.swift in Sources */,
 				078012ED1D1E57730093DE24 /* AppDelegate.swift in Sources */,
+				F96ACB84202F88DB001CA53F /* FakeRoom.swift in Sources */,
 				F96ACB59202D74CD001CA53F /* SocketService.swift in Sources */,
 				07130E8A1D22928200CC85D8 /* KeyCenter.swift in Sources */,
+				F96ACB74202F7BC6001CA53F /* RegisterViewController.swift in Sources */,
 				0790F1531D1E9781003F8C18 /* VideoViewLayouter.swift in Sources */,
+				F96ACB6C202F7BB3001CA53F /* CollectionCell.swift in Sources */,
+				F96ACB6A202F7B5E001CA53F /* Authservice.swift in Sources */,
 				0790F1281D1E645B003F8C18 /* LiveRoomViewController.swift in Sources */,
 				0790F1261D1E6450003F8C18 /* SettingsViewController.swift in Sources */,
+				F96ACB78202F7BED001CA53F /* TableViewDatasource.swift in Sources */,
 				F96ACB57202D1851001CA53F /* Poop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,12 +611,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		078012F01D1E57730093DE24 /* Main.storyboard */ = {
+		078012F01D1E57730093DE24 /* CreateRoom.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				078012F11D1E57730093DE24 /* Base */,
 			);
-			name = Main.storyboard;
+			name = CreateRoom.storyboard;
 			sourceTree = "<group>";
 		};
 		078012F51D1E57730093DE24 /* LaunchScreen.storyboard */ = {
