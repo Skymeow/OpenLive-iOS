@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     //    MARK: connectToSocket
     func applicationDidBecomeActive(_ application: UIApplication) {
-        SocketService.instance.establishConnection()
+      SocketService.instance.establishConnection()
     }
     
     //    MARK: leave Socket

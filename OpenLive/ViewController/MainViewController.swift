@@ -16,6 +16,15 @@ class MainViewController: UIViewController {
 
     fileprivate var videoProfile = AgoraRtcVideoProfile._VideoProfile_360P
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    @IBAction func testGetroomTapped(_ sender: UIButton) {
+        SocketService.instance.getChannel { (success) in
+            print("rwrwr")
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueId = segue.identifier else {
             return

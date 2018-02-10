@@ -37,6 +37,7 @@
 		F96ACB55202D0261001CA53F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB54202D0261001CA53F /* Config.swift */; };
 		F96ACB57202D1851001CA53F /* Poop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB56202D1851001CA53F /* Poop.swift */; };
 		F96ACB59202D74CD001CA53F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB58202D74CD001CA53F /* SocketService.swift */; };
+		F96ACB5B202D829D001CA53F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB5A202D829D001CA53F /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		F96ACB54202D0261001CA53F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F96ACB56202D1851001CA53F /* Poop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poop.swift; sourceTree = "<group>"; };
 		F96ACB58202D74CD001CA53F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		F96ACB5A202D829D001CA53F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,24 +161,19 @@
 		078012EB1D1E57730093DE24 /* OpenLive */ = {
 			isa = PBXGroup;
 			children = (
-				1F91232A20290D8D007E30C3 /* infoPlist.png */,
-				078012F01D1E57730093DE24 /* Main.storyboard */,
-				078012EE1D1E57730093DE24 /* MainViewController.swift */,
-				0790F1251D1E6450003F8C18 /* SettingsViewController.swift */,
-				0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */,
-				F96ACB58202D74CD001CA53F /* SocketService.swift */,
 				1F912329202907B1007E30C3 /* README.md */,
-				07130E891D22928200CC85D8 /* KeyCenter.swift */,
-				F96ACB56202D1851001CA53F /* Poop.swift */,
-				0790F1501D1E9631003F8C18 /* VideoSession.swift */,
-				0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */,
-				0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */,
-				0790F1191D1E633C003F8C18 /* Frameworks */,
-				078012EC1D1E57730093DE24 /* AppDelegate.swift */,
-				078012F31D1E57730093DE24 /* Assets.xcassets */,
-				078012F51D1E57730093DE24 /* LaunchScreen.storyboard */,
+				1F91232A20290D8D007E30C3 /* infoPlist.png */,
 				078012F81D1E57730093DE24 /* Info.plist */,
-				F96ACB54202D0261001CA53F /* Config.swift */,
+				078012EC1D1E57730093DE24 /* AppDelegate.swift */,
+				F96ACB5F202F76E6001CA53F /* Storyboard */,
+				F96ACB5C202F7679001CA53F /* ViewController */,
+				F96ACB62202F781F001CA53F /* Service */,
+				F96ACB5D202F76A1001CA53F /* Model */,
+				F96ACB5E202F76B3001CA53F /* Credentials */,
+				F96ACB60202F77FC001CA53F /* VideoHelper */,
+				F96ACB61202F780C001CA53F /* View */,
+				0790F1191D1E633C003F8C18 /* Frameworks */,
+				078012F31D1E57730093DE24 /* Assets.xcassets */,
 			);
 			path = OpenLive;
 			sourceTree = "<group>";
@@ -214,6 +211,68 @@
 				50215475412EB07621262284 /* Pods-OpenLiveUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F96ACB5C202F7679001CA53F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				078012EE1D1E57730093DE24 /* MainViewController.swift */,
+				0790F1251D1E6450003F8C18 /* SettingsViewController.swift */,
+				0790F1271D1E645B003F8C18 /* LiveRoomViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F96ACB5D202F76A1001CA53F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F96ACB5A202D829D001CA53F /* Room.swift */,
+				F96ACB56202D1851001CA53F /* Poop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F96ACB5E202F76B3001CA53F /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				F96ACB54202D0261001CA53F /* Config.swift */,
+				07130E891D22928200CC85D8 /* KeyCenter.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		F96ACB5F202F76E6001CA53F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				078012F01D1E57730093DE24 /* Main.storyboard */,
+				078012F51D1E57730093DE24 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F96ACB60202F77FC001CA53F /* VideoHelper */ = {
+			isa = PBXGroup;
+			children = (
+				0790F1501D1E9631003F8C18 /* VideoSession.swift */,
+			);
+			path = VideoHelper;
+			sourceTree = "<group>";
+		};
+		F96ACB61202F780C001CA53F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0790F1521D1E9781003F8C18 /* VideoViewLayouter.swift */,
+				0790F1681D1EEAB2003F8C18 /* ProfileCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F96ACB62202F781F001CA53F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F96ACB58202D74CD001CA53F /* SocketService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +500,7 @@
 			files = (
 				0790F1691D1EEAB2003F8C18 /* ProfileCell.swift in Sources */,
 				0790F1511D1E9631003F8C18 /* VideoSession.swift in Sources */,
+				F96ACB5B202D829D001CA53F /* Room.swift in Sources */,
 				F96ACB55202D0261001CA53F /* Config.swift in Sources */,
 				078012EF1D1E57730093DE24 /* MainViewController.swift in Sources */,
 				078012ED1D1E57730093DE24 /* AppDelegate.swift in Sources */,

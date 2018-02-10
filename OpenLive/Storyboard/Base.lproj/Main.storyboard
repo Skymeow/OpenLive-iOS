@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -250,6 +249,13 @@
                                     <constraint firstAttribute="width" constant="1" id="mWo-4r-A7a"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khm-S2-H2f">
+                                <rect key="frame" x="164" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testGetroomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXr-RS-CiC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -261,7 +267,9 @@
                             <constraint firstItem="wKA-aN-RbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Idb-km-eC2"/>
                             <constraint firstItem="wKA-aN-RbB" firstAttribute="top" secondItem="UsM-kr-5FN" secondAttribute="bottom" constant="36" id="XLV-qV-LaI"/>
                             <constraint firstAttribute="trailing" secondItem="4Xd-Ai-SWi" secondAttribute="trailing" id="XnI-39-Q2G"/>
+                            <constraint firstItem="Khm-S2-H2f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eBO-0N-WcG"/>
                             <constraint firstItem="ioN-uk-xK5" firstAttribute="top" secondItem="wKA-aN-RbB" secondAttribute="bottom" constant="13" id="eRt-4d-JWi"/>
+                            <constraint firstItem="Khm-S2-H2f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2b-4R-3zq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NOt-rn-oml"/>
